@@ -282,6 +282,9 @@ export default function Home() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4">
+      <p className="absolute bottom-3 left-3 text-xs text-white/90 bg-black/45 px-2 py-1 rounded">
+        Made by: Himansa
+      </p>
       {bgImageUrl ? (
         <img
           className="absolute inset-0 h-full w-full object-cover"
@@ -302,9 +305,8 @@ export default function Home() {
       ) : null}
       {showLoginNotice ? (
         <div
-          className={`absolute top-4 left-1/2 -translate-x-1/2 rounded-md bg-emerald-600 px-4 py-2 text-sm text-white transition-opacity duration-700 ${
-            fadeLoginNotice ? "opacity-0" : "opacity-100"
-          }`}
+          className={`absolute top-4 left-1/2 -translate-x-1/2 rounded-md bg-emerald-600 px-4 py-2 text-sm text-white transition-opacity duration-700 ${fadeLoginNotice ? "opacity-0" : "opacity-100"
+            }`}
         >
           Logged in as {loggedInUser}
         </div>
